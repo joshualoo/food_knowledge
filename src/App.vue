@@ -3,22 +3,21 @@
     <Header/>
     <Hero/>
     <Body/>
+    <Footer/>
   </div>
 </template>
 
 <script>
 // dependencies
 import 'bootstrap/dist/css/bootstrap.css'
-import AOS from 'aos/dist/aos.js'
 
 //components
 import Header from './components/Header.vue'
 import Hero from './components/Hero.vue'
 import Body from './components/Body.vue'
+import Footer from './components/Footer.vue'
 
 let WebFont = require('webfontloader');
-
-AOS.init();
 
 WebFont.load({
     google: {
@@ -31,7 +30,8 @@ export default {
   components: {
     Header,
     Hero,
-    Body    
+    Body,
+    Footer
   }
 }
 </script>

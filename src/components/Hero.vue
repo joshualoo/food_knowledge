@@ -1,12 +1,12 @@
 <template>
     <div class="">
-        <div class="hero-container">
+        <div class="hero-container shadow-lg bg-white rounded">
             <div class="hero-img"></div>
 
                 <div class="shape-right"></div>
                 <div class="shape-left"></div>
 
-            <div class="header-container">
+            <div class="header-container ">
                 <h1>Learn about Food</h1>
                 <h2 class = "text-white">Feeling Adventurous? / Just curious?</h2>
             <button class="cta"> <span class="hightlight">Let's go!</span></button>
@@ -29,12 +29,13 @@ export default {
         white-space:nowrap;
     }
     .hero-img{
-        background:url('../assets/bg.jpg');
+        background:url('../assets/bg-2.jpg');
         background-attachment: fixed;
         width:100%;
         height:100%;
-        filter:brightness(1.1);
+        filter:brightness(0.7);
         background-size:cover;
+        background-position-y: 100px;
     }
     .header-container>h1,.sec-header-container>h3{
         color:rgba(255,255,255,0.99);
@@ -43,7 +44,7 @@ export default {
         position:absolute;
         width:40%;
         height:600px;
-        filter:opacity(0.10);
+        filter:opacity(0.15);
         background: #E0EAFC;  /* fallback for old browsers */
         background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
         background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */

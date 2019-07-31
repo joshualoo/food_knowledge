@@ -4,6 +4,7 @@
 Vue.js w/ Vue-CLI\
 Bootstrap 4\
 Axios\
+AOS.js\
 Edamam API - https://developer.edamam.com/food-database-api-docs
 
 ## What it does:
