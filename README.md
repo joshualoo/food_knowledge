@@ -7,7 +7,7 @@ Axios\
 Edamam API - https://developer.edamam.com/food-database-api-docs
 
 ## What it does:
-Connect with API with axios to grab data through a search query\
+Connect API with axios to grab data through a search query\
 Populate fields after query
 
 ## Future Practice/Improvements:
