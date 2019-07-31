@@ -1,29 +1,17 @@
-# ballistic
+# Food Knowledge - more practice using APIs
 
-## Project setup
-```
-yarn install
-```
+## Made with:
+Vue.js w/ Vue-CLI
+Bootstrap 4
+Axios
+Edamam API - https://developer.edamam.com/food-database-api-docs
 
-### Compiles and hot-reloads for development
-```
-yarn run serve
-```
+## What it does:
+Connect with API with axios to grab data through a search query
+Populate fields after query
 
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## Future Practice/Improvements:
+Query based on checkbox selections
+Randomize based on preference
+Oauth Logins 
+Save Food Items to a Meal Plan - w/ Database

@@ -1,28 +1,92 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header/>
+    <Hero/>
+    <Body/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// dependencies
+import 'bootstrap/dist/css/bootstrap.css'
+import AOS from 'aos/dist/aos.js'
+
+//components
+import Header from './components/Header.vue'
+import Hero from './components/Hero.vue'
+import Body from './components/Body.vue'
+
+let WebFont = require('webfontloader');
+
+AOS.init();
+
+WebFont.load({
+    google: {
+      families: ['Open Sans', 'Cousine']
+    }
+  });
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    Header,
+    Hero,
+    Body    
   }
 }
 </script>
 
 <style>
+body{overflow-x:hidden;}
+ul{padding:0;}
+li{list-style:none;padding:0;}
+textarea:focus, input:focus{outline: none;}
+button{ border: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    overflow: visible;
+    background: transparent;}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Cousine', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
+h1{
+  font-family:'Open Sans';
+  font-size:55px;
+}
+h2{
+  font-size:25px;
+}
+h3{
+  font-size:20px;
+}
+.text-underline{
+  border-bottom:tomato;
+  border-width:5px;
+}
+    .cta{
+        position:absolute;
+        color:white;
+        padding:30px 50px 30px 50px;
+        outline:0;
+        left:50%;
+        transform:translateX(-50%);
+        bottom:-60%;
+        line-height:5px;
+        white-space:nowrap;
+        font-size:25px;
+        letter-spacing:0;
+        font-weight: 500;
+        border-color: tomato;
+        border-style: none none solid;
+        border-width: 10px 0px 10px;
+        padding: 0px 0px 5px;
+        transition:0.2s ease-out;
+    }
+    .cta:hover{
+         border-width: 0px 0px 0px;
+    }
 </style>
