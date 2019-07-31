@@ -111,20 +111,19 @@ export default {
                 .then(response => {
                     this.food.searched = response.data.text,
                     this.food.name = response.data.parsed[0].food.label,
-                    this.food.carbs = response.data.hints[0].food.nutrients.CHOCDF.toFixed(1),
-                    this.food.calories = response.data.hints[0].food.nutrients.ENERC_KCAL.toFixed(1
-                    ),
-                    this.food.protein = response.data.hints[0].food.nutrients.PROCNT.toFixed(1),
-                    this.food.fat = response.data.hints[0].food.nutrients.FAT.toFixed(1),
+                    this.food.carbs = response.data.hints[0].food.nutrients.CHOCDF.toFixed(2),
+                    this.food.calories = response.data.hints[0].food.nutrients.ENERC_KCAL.toFixed(1),
+                    this.food.protein = response.data.hints[0].food.nutrients.PROCNT.toFixed(2),
+                    this.food.fat = response.data.hints[0].food.nutrients.FAT.toFixed(2),
 
                     this.avgIntake.avgCarbs = ((response.data.hints[0].food.nutrients.CHOCDF/dailyCarbs)*100).toFixed(1) + '%',
-                    this.avgIntake.avgCalories = ((response.data.hints[0].food.nutrients.ENERC_KCAL/dailyCalories)*100).toFixed(1) + '%',
+                    this.avgIntake.avgCalories = ((response.data.hints[0].food.nutrients.ENERC_KCAL/dailyCalories)*100).toFixed(2) + '%',
                     this.avgIntake.avgProtein = ((response.data.hints[0].food.nutrients.PROCNT/dailyProtein)*100).toFixed(1) + '%',
                     this.avgIntake.avgFat = ((response.data.hints[0].food.nutrients.FAT/dailyFat)*100).toFixed(1) + '%'
                     // console.log(this.avgCarbs);
                 })
                 .catch(function(error){
-                    console.log(error);
+                   console.log(error);
             })
         }
     },
